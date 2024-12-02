@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    height: 100%;
+}
+#board {
+    
+    background-image: url("./doodlejumpbg.png");
+
+}
+.wrapper {
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    place-content: center;
+    margin: 0;
+    background-color: rgb(228, 208, 167);
+    height: 100vh;
+}
+.wrapper::before {
+    content: '';
+    width: 120vmax;
+    height: 120vmax;
+    opacity: 0.4;
+    background: repeating-conic-gradient(from 0deg, white 0deg 15deg, transparent 15deg 30deg);
+ -webkit-mask-image: radial-gradient(rgba(255,255,255,0.05) 15%, rgba(255,255,255,0.7) 50%);
+  animation: animate 20s linear infinite;
+}
+.wrapper #board {
+    position: absolute;
+    right: 40%;
+    bottom: 17%;
+}
+@keyframes animate {
+    to{
+        transform: rotate(1turn);
+    }
+    
+}
+
